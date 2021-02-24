@@ -1,19 +1,18 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int fib(int n) {
-    if (n == 1)
-        return 0;
-    else if (n == 2)
+int fib(int num) {
+    if (num == 0 or num == 1) {
         return 1;
-    else
-        return (fib(n-1) + fib(n-2));
+    }
+    return fib(num-1) + fib(num-2);
 }
 
 int main() {
-    int numero;
-    cin >> numero;
-    cout << fib(numero) << endl;
-
+    int num;
+    
+    cin >> num;
+    cout << fib(num) << endl;
+    
     return 0;
 }
